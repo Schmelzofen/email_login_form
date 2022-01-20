@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <% if (!authenticated) { %>
+            <h1>Welcome to the community!</h1>
+            <div class="login">
+                <h2>Already a member?</h2>
+                <%- include("../partials/loginform.ejs") %> 
+            </div>
+            <div class="regist">
+                <h3>Or are you a new member?</h3>
+                <%- include("../partials/registform.ejs") %> 
+            </div>
+        <% } else { %>
+            <h1>Welcome Back!</h1>
+            <ul>
+                <li>Hello</li>
+                <li>and</li>
+                <li>Welcome!</li>
+            </ul>
+            <% } %> 
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
