@@ -1,0 +1,16 @@
+<script src="/socket.io/socket.io.js"></script>
+<section class="messenger">
+    <form action="/chat" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="username" value="<%- user.username %> ">
+        <input type="hidden" name="date" value="">
+        <textarea name="message" cols="30" rows="5" placeholder="enter message"></textarea>
+        <br>
+        <input type="submit" value="send message" onclick="socket.emit('UpdateOnDatabase')">
+    </form>
+</section>
+<script>
+    var socket = io()
+    socket.on('RefreshPage', function (data) {
+        location.reload()
+    });
+</script>

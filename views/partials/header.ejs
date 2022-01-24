@@ -1,0 +1,16 @@
+<header>
+    <h1><a href="/">Flakebook</a></h1>
+    <nav>
+        <ul>
+            <% if(!user) {%>
+            <li><a href="/login">Login</a></li>
+            <%} else {%>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/chat">Chat</a></li>
+            <li><a href="/messages">Messages</a></li>
+            <li><a href="/profile/<%- user.id %> ">Profile</a></li>
+            <li><a href="/">Home</a></li>
+            <%}  %> 
+        </ul>
+    </nav>
+</header>

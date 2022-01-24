@@ -1,6 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Roboto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 0;
+    background: tomato;
+}
+
+header h1 {
+    margin-left: 25px;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin-right: 25px;
+}
+
+header nav ul li a,
+header h1 a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header nav ul li a:hover,
+header h1 a:hover {
+    color: gold;
+}
+
+/* MAIN */
+
+.happyPeopleMain {
+    background: url("/img/1.jpeg") center/cover no-repeat;
+    height: 50vh;
+    margin: 5% 0 0;
+    bottom: 0;
+}
+
+.happyPeopleMain h2 {
+    font-size: 10vh;
+    color: white;
+    text-align: center;
+    padding: 9% 0 0 0;
+
+}
+
+main h1 {
+    font-size: 6vh;
+    margin: 3% 0 0 5%;
+}
+
+main p {
+    text-align: center;
+    margin: 2% 0 0;
+    font-size: 3vh;
+}
+
+.buttonContainerMain {
+    text-align: center;
+    padding: 1% 0 0;
+}
+
+main button {
+    width: 150px;
+    height: 50px;
+    margin: 2% 1% 0;
+    border: none;
+    border-radius: 7px;
+    font-size: 2.5vh;
+
+    transition: all 0.2s ease;
+}
+
+main button:active {
+    transform: scale(.8);
+}
+
+main button a {
+    text-decoration: none;
     color: tomato;
+}
+
+/* LOGIN */
+
+.loginContainer {
+    text-align: center;
+}
+
+.loginForm {
+    display: inline-block;
+    padding: .5% 3%;
+    border-radius: 7px;
+    background: rgba(255, 99, 71, .2);
+    text-align: left;
+    margin: 3% 0 0;
+}
+
+.loginForm h2 {
+    text-align: center;
+    padding: 3% 0 2% 0;
+    font-weight: lighter;
+    font-size: 5vh;
+}
+
+.loginForm input {
+    border-radius: 5px;
+    border: none;
+    padding: 2% 1%;
+    width: 150px;
+    text-indent: 10px;
+}
+
+.submitButton {
+    text-align: center;
+    margin: 8% 0 3%;
+}
+
+.submitButton input {
+    letter-spacing: 2px;
+    text-indent: 0px;
+}
+
+.happyPeople img {
+    margin: 0 0 -3%;
+}
+
+.welcomeBack {
+    margin: 3% 0 0 5%;
+    font-size: 3vh;
+}
+
+/* REGISTRATION */
+
+.registerMain h1 {
+    padding: 3% 0 1%;
+    margin: 0;
+    text-align: center;
+}
+
+.registerForm {
+    text-align: center;
+    background: rgba(255, 99, 71, .2);
+    border-radius: 15px;
+    margin: 0 30%;
+    padding: 2% 0;
+}
+
+.registerForm form input {
+    width: 175px;
+    height: 50px;
+    margin: 1%;
+    border-radius: 7px;
+    border: none;
+    background: whitesmoke;
+    text-indent: 10px;
+}
+
+.registerSubmit {
+    text-align: center;
+}
+
+.registerSubmit input {
+    font-size: 2.5vh;
+    letter-spacing: 1px;
+}
+
+/* VERIFICATION */
+
+.confirmActivation h1 {
+    padding: 0% 0 2%;
+}
+
+.codeEnter {
+    background: rgba(255, 99, 71, .2);
+    width: 75%;
+    padding: 5% 0;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.codeEnter form input {
+    width: 175px;
+    height: 50px;
+    margin: 1%;
+    border-radius: 7px;
+    border: none;
+    background: whitesmoke;
+    text-indent: 12px;
+}
+
+.codeEnter form input::placeholder {
+    font-size: 2vh;
+}
+
+.codeEnter form input:nth-of-type(3) {
+    text-indent: 0;
+}
+
+.lostCode {
+    text-align: center;
+    font-size: 4vh;
+    margin: 2% 0 0;
+}
+
+/* VERIFIED */
+
+.verified {
+    text-align: center;
+    background: rgba(255, 99, 71, .2);
+    width: 50%;
+    padding: 2% 0;
+    margin: 1% auto;
+    border-radius: 10px;
+}
+
+.finish {
+    text-align: center;
+}
+
+.finish img {
+    width: 650px;
+    height: 325px;
+}
+
+.messenger {
+    text-align: center;
+    width: 300px;
+    margin: 2% auto;
+    border: 1px solid black;
+    display: block;
+    padding: 1%;
+    border-radius: 7px;
+    background: rgba(255, 99, 71, .2);
+}
+
+.messenger textarea {
+    text-indent: 10px;
+    border-radius: 7px;
+}
+
+.messenger input[type="submit"] {
+    padding: 2% 7%;
+    margin: 3% 0 0;
+    background: lightgrey;
+    border: none;
+}
+
+.singleMessage {
+    display: block;
+    width: 50%;
+    border: 1px solid black;
+    margin: 2% 0 0 5.2%;
+    padding: 1%;
+    border-radius: 7px;
+    background: rgba(255, 99, 71, .2);
+}
+
+.singleMessage li {
+    font-size: 2.8vh;
+}
+
+.username {
+    font-size: 3vh;
+
+}
+
+.reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    list-style-type: none;
+}
+
+.line h1 {
+    border-bottom: 1px solid black;
+    width: 33%;
+}
+
+.noMessages {
+    color: gold;
+    background: tomato;
+    text-align: center;
+    width: 50%;
+    margin: 3% auto 0;
+    padding: 2% 0;
+    border-radius: 10px;
+}
+
+.formsBlock {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.formsBlock input,
+.formsBlock textarea {
+    margin: 2% 0 0 15%;
+    padding: 1% 0;
 }

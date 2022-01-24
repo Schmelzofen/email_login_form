@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Flakebook | Chat</title>
+</head>
+<body>
+    <%- include ("../partials/header.ejs") %>
+    <main>
+        <section class="chatBox">
+            <%- include("../partials/pubmessenger.ejs") %> 
+        </section>
+        <div class="line">
+            <h1>Flakebook Public Chat</h1>
+        </div>
+        <section class="messagesPublic">
+        <% if(messages.length > 0) {%>
+            <ul class="reverse">
+            <% messages.forEach(elt => {%>
+                <div class="singleMessage">
+                    <li>
+                        <span class="username"><%- elt.username %>: </span>
+                        <%- elt.message %>
+                    </li>
+                    <span><%- elt.date %></span> 
+                </div>
+                <% }) %>
+            </ul>
+        <% } else { %>
+            <div class="noMessages">
+                <span>No messages available</span>
+            </div>
+            <% } %> 
+        </section>
+    </main>
+</body>
+</html>

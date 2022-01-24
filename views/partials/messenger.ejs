@@ -1,0 +1,11 @@
+<section class="messengerpriv">
+    <form action="/message" method="post" enctype="multipart/form-data">
+        <div class="formsBlock">
+            <input type="text" name="to" placeholder="Username">
+            <input type="hidden" name="from" value="<%- user.username %> ">
+            <input type="hidden" name="date" value="">
+            <textarea name="message" cols="30" rows="5" placeholder="enter message"></textarea>
+            <input type="submit" value="send message">
+        </div>
+    </form>
+</section>

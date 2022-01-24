@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Verification</title>
+</head>
+<body>
+    <%- include ("../partials/header.ejs") %> 
+    <main>
+        <section class="confirmActivation">
+            <h1>Enter your ID and the confirmation code below:</h1>
+        </section>
+        <section class="codeEnter">
+            <form action="/verification" method="post" enctype="multipart/form-data">
+                <input type="text" name="id" placeholder="Enter your ID">
+                <input type="text" name="confirmationCode" placeholder="confirmation Code">
+                <input type="submit" value="send Code">
+            </form>
+        </section>
+        <% if(user){ %> 
+        <div class="lostCode">
+            <span>Lost your code? </span><a href="/resendverification/<%- user.id %> ">resend mail</a>
+        </div>
+        <% } %> 
+    </main>
+</body>
+</html>

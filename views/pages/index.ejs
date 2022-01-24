@@ -5,31 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Home</title>
+    <title>Flakebook | Home</title>
 </head>
 <body>
-    <header>
-
-    </header>
+    <%- include("../partials/header.ejs") %> 
     <main>
-        <% if (!authenticated) { %>
-            <h1>Welcome to the community!</h1>
-            <div class="login">
-                <h2>Already a member?</h2>
-                <%- include("../partials/loginform.ejs") %> 
+            <% if(!user){ %> 
+            <h1>Welcome to Flakebook!</h1>
+            <p>You need to login or sign-up to gain entrance.</p>
+            <div class="buttonContainerMain">
+                <a href="/login"><button>Login</button></a>
+                <a href="/registration"><button>Sign-Up</button></a>
             </div>
-            <div class="regist">
-                <h3>Or are you a new member?</h3>
-                <%- include("../partials/registform.ejs") %> 
+            <div class="happyPeopleMain">
+                <h2>WE ARE SO HAPPY, JOIN US!</h2>
             </div>
-        <% } else { %>
-            <h1>Welcome Back!</h1>
-            <ul>
-                <li>Hello</li>
-                <li>and</li>
-                <li>Welcome!</li>
-            </ul>
-            <% } %> 
+                <% } else { %> 
+                    <div class="welcomeBack">
+                        <h2>Welcome back, <%- user.username %>!</h2>
+                    </div>
+                <% } %> 
     </main>
     <footer>
 
